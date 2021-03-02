@@ -1,0 +1,64 @@
+//ЗАДАНИЕ 1.1
+var strOne:String? = "142"
+var strTwo:String? = "ads"
+var strThree:String? = nil
+
+print(strOne ?? "no value")
+print(strTwo ?? "no value")
+print(strThree ?? "no value")
+
+
+strThree = String("zxc")
+
+print(strThree ?? "no value")
+
+
+
+//ЗАДАНИЕ 1.2
+let a:String = "12"
+let b:String = "1a2b"
+let c:String = "143"
+let d:String = "1"
+let e:String = "asd"
+
+let convertedA = Int(a)
+let convertedB = Int(b)
+let convertedC = Int(c)
+let convertedD = Int(d)
+let convertedE = Int(e)
+
+var sum = 0
+
+if convertedA != nil {
+    sum += convertedA!
+}
+if let bValue = convertedB {
+    sum += bValue
+}
+if convertedC != nil {
+    sum += convertedC!
+}
+if let dValue = convertedD {
+    sum += dValue
+}
+if convertedE != nil {
+    sum += convertedE!
+}
+print(sum)
+
+//ЗАДАНИЕ 2
+
+let t = Int("12")
+if t != nil {
+    if t! < -273 {
+        print("LIAR")
+    } else if t! > -273 && t! < -89 {
+        print("вы не на земле")
+    } else if -89..<0 ~= t! {
+        print("наденьте шапку")
+    } else if 0...16 ~= t! {
+        print("на улице прохладно")
+    } else if t! > 16 {
+        print("в принципе тепло")
+    }
+}else {print("Thermometer has been broken")}
